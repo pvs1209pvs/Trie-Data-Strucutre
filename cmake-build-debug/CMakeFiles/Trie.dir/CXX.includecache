@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/pvs12/CLionProjects/Trie/Node.h
+vector
+-
+ostream
+-
+
+C:/Users/pvs12/CLionProjects/Trie/Trie.h
+Node.h
+C:/Users/pvs12/CLionProjects/Trie/Node.h
+
+C:/Users/pvs12/CLionProjects/Trie/main.cpp
+iostream
+-
+algorithm
+-
+Node.h
+C:/Users/pvs12/CLionProjects/Trie/Node.h
+Trie.h
+C:/Users/pvs12/CLionProjects/Trie/Trie.h
+
