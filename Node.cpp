@@ -17,7 +17,7 @@ Node::Node(char v) {
  * @param v Value to find for amongst children nodes.
  * @return Index of v if present. -1 is returned if no match is found.
  */
-int Node::contains(char v) {
+int Node::contains(const char v) const {
 
     auto it = std::find(children.begin(), children.end(), Node(v));
 

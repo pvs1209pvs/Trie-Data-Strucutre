@@ -13,7 +13,7 @@ public:
 
     explicit Node(char v);
 
-    int contains(char v);
+    int contains(char v) const;
 
     bool operator==(const Node &rhs) const;
 
