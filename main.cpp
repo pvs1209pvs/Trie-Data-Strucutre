@@ -17,7 +17,7 @@ int main() {
 
     trie.erase("pickled");
 
-    std::cout << "find " << std::boolalpha << trie.find("pickled") << std::endl;
+    std::cout << "find " << std::boolalpha << trie.find("picked") << std::endl;
 
     return 0;
 }

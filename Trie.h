@@ -16,11 +16,11 @@ public:
 
 private:
 
-    void insert(Node *parent, const std::string &val, int index);
+    void insert(Node &parent, const std::string &val, int index);
 
-    void find(Node *parent, const std::string &probe, const std::string &running, bool &result,
+    void find(Node &parent, const std::string &probe, const std::string &running, bool &result,
               const bool &allow_substr_matching);
 
-    Node *erase(Node *parent, const std::string &del, const std::string &running);
+    bool erase(Node &parent, const std::string &del, const std::string &running);
 };
 

@@ -9,7 +9,7 @@
  */
 Node::Node(char v) {
     this->value = v;
-    this->children = std::vector<Node*>();
+    this->children = std::vector<Node>();
 }
 
 /**
@@ -19,9 +19,7 @@ Node::Node(char v) {
  */
 int Node::contains(char v) {
 
-    auto it = std::find_if(children.begin(), children.end(), [&](const Node*  n){
-        return n->value == v;
-    });
+    auto it = std::find(children.begin(), children.end(), Node(v));
 
     return it != children.end() ? it - children.begin() : -1;
 
@@ -39,7 +37,7 @@ std::ostream &operator<<(std::ostream &output, const Node &node) {
 
     std::stringstream ss_children;
     for (const auto &i : node.children) {
-        ss_children << i->value << ", ";
+        ss_children << i.value << ", ";
     }
     ss_children << "])";
 
@@ -48,4 +46,9 @@ std::ostream &operator<<(std::ostream &output, const Node &node) {
     return output;
 
 }
+
+bool Node::operator==(const Node &rhs) const {
+    return value == rhs.value;
+}
+
 
