@@ -3,40 +3,21 @@
 #include "Node.h"
 #include "Trie.h"
 
-class Name{
-
-
-public:
-
-    int a = 0;
-
-    Name() = default;
-
-    Name(int v){
-        a = v;
-    }
-
-    bool operator==(const Name &rhs) const {
-        return a == rhs.a;
-    }
-
-};
-
-
 int main() {
-
-    std::cout << std::boolalpha << (*(new Name('a'))==*(new Name('a'))) << std::endl;
 
     Trie trie{};
 
 
-    trie.insert("their");
-    trie.insert("there");
+    trie.insert("peter");
+    trie.insert("piper");
+    trie.insert("picked");
+    trie.insert("peck");
+    trie.insert("pickled");
+    trie.insert("peppers");
 
+    trie.erase(&trie.root, "pickled", {});
 
-    trie.erase(trie.root, "there", {});
-
-    std::cout << "search " << std::boolalpha << trie.search("there") << std::endl;
+    std::cout << "search " << std::boolalpha << trie.search("pickled") << std::endl;
 
     return 0;
 }

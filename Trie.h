@@ -12,13 +12,13 @@ public:
 
     bool search(const std::string &probe, const bool &allow_substr_matching = false);
 
-    void erase(Node &parent, const std::string &del, const std::string &running);
+    Node* erase(Node *parent, const std::string &del, const std::string &running);
 
 private:
 
-    void insert(Node &parent, const std::string &val, int index);
+    void insert(Node *parent, const std::string &val, int index);
 
-    void search(Node &parent, const std::string &probe, const std::string &running, bool &result,
+    void search(Node *parent, const std::string &probe, const std::string &running, bool &result,
                 const bool &allow_substr_matching);
 
 
