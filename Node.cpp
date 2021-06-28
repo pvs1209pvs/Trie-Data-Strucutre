@@ -3,15 +3,19 @@
 #include <sstream>
 #include <iostream>
 
+/**
+ * Constructs a node with value v.
+ * @param v Value of the node.
+ */
 Node::Node(char v) {
     this->value = v;
     this->children = std::vector<Node*>();
 }
 
 /**
- *
- * @param v
- * @return Index of v if present, else -1.
+ * Returns the index of the value.
+ * @param v Value to find for amongst children nodes.
+ * @return Index of v if present. -1 is returned if no match is found.
  */
 int Node::contains(char v) {
 
@@ -23,6 +27,12 @@ int Node::contains(char v) {
 
 }
 
+/**
+ * Output stream overloaded.
+ * @param output Output stream.
+ * @param node Node to be outputted.
+ * @return Output stream with node.
+ */
 std::ostream &operator<<(std::ostream &output, const Node &node) {
 
     output << "Node(value = " << node.value << ", children = [";

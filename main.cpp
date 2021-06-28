@@ -15,9 +15,9 @@ int main() {
     trie.insert("pickled");
     trie.insert("peppers");
 
-    trie.erase(&trie.root, "pickled", {});
+    trie.erase("pickled");
 
-    std::cout << "search " << std::boolalpha << trie.search("pickled") << std::endl;
+    std::cout << "find " << std::boolalpha << trie.find("pickled") << std::endl;
 
     return 0;
 }
