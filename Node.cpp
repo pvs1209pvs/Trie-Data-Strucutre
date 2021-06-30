@@ -51,4 +51,16 @@ bool Node::operator==(const Node &rhs) const {
     return value == rhs.value;
 }
 
+const char &Node::get_value() const {
+    return value;
+}
+
+const std::vector<Node> &Node::get_children() const {
+    return children;
+}
+
+std::vector<Node> &Node::get_children() {
+    return children;
+}
+
 

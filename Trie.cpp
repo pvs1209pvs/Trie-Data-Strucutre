@@ -16,10 +16,10 @@ void Trie::insert(Node &parent, const std::string &val, int index) {
     int crnt_char_index = parent.contains(val[index]);
 
     if (crnt_char_index == -1) {
-        parent.children.emplace_back(val[index]);
-        insert(parent.children.back(), val, index + 1);
+        parent.get_children().emplace_back(val[index]);
+        insert(parent.get_children().back(), val, index + 1);
     } else {
-        insert(parent.children.at(crnt_char_index), val, index + 1);
+        insert(parent.get_children().at(crnt_char_index), val, index + 1);
     }
 
 }
@@ -53,9 +53,9 @@ void Trie::find(Node &parent, const std::string &probe, const std::string &runni
         }
     }
 
-    for (Node &child : parent.children) {
+    for (Node &child : parent.get_children()) {
         if (!result) {
-            find(child, probe, running + child.value, result, allow_substr_matching);
+            find(child, probe, running + child.get_value(), result, allow_substr_matching);
         }
     }
 
@@ -82,19 +82,19 @@ bool Trie::find(const std::string &probe, const bool &allow_substr_matching) {
  */
 bool Trie::erase(Node &parent, const std::string &del, const std::string &running) {
 
-    for (int i = 0; i < parent.children.size(); ++i) {
+    for (int i = 0; i < parent.get_children().size(); ++i) {
 
-        std::string next = running + parent.children.at(i).value;
+        std::string next = running + parent.get_children().at(i).get_value();
 
         if (del.find(next) != std::string::npos) {
-            if(erase(parent.children.at(i), del, next)){
-                parent.children.erase(parent.children.begin()+i);
+            if(erase(parent.get_children().at(i), del, next)){
+                parent.get_children().erase(parent.get_children().begin()+i);
             }
         }
 
     }
 
-    return parent.children.empty();
+    return parent.get_children().empty();
 
 }
 
