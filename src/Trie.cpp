@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../include/Trie.h"
+#include "Trie.h"
 
 /**
  * Inserts string to the container.

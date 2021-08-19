@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/Testing.dir/main.cpp.o CMakeFiles/Testing.dir/home/param/Desktop/Trie-Data-Strucutre/src/Trie.cpp.o CMakeFiles/Testing.dir/home/param/Desktop/Trie-Data-Strucutre/src/Node.cpp.o  -o Testing  -Wl,-Bstatic -lgtest -Wl,-Bdynamic -lpthread 

@@ -1,0 +1,3 @@
+/home/param/Desktop/Trie-Data-Strucutre/src/build/CMakeFiles/rebuild_cache.dir
+/home/param/Desktop/Trie-Data-Strucutre/src/build/CMakeFiles/edit_cache.dir
+/home/param/Desktop/Trie-Data-Strucutre/src/build/CMakeFiles/Trie.dir

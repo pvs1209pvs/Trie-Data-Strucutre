@@ -6,6 +6,7 @@
 int main() {
 
     Trie trie{};
+    std::cout << "Play with Trie here." << std::endl;
 
     return 0;
 }

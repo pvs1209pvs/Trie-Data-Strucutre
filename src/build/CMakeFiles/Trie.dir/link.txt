@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/Trie.dir/main.cpp.o CMakeFiles/Trie.dir/Node.cpp.o CMakeFiles/Trie.dir/Trie.cpp.o  -o Trie 

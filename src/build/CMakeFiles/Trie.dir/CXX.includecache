@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/param/Desktop/Trie-Data-Strucutre/src/Node.cpp
+Node.h
+/home/param/Desktop/Trie-Data-Strucutre/src/Node.h
+algorithm
+-
+sstream
+-
+iostream
+-
+
+/home/param/Desktop/Trie-Data-Strucutre/src/Node.h
+vector
+-
+ostream
+-
+
+/home/param/Desktop/Trie-Data-Strucutre/src/Trie.cpp
+iostream
+-
+Trie.h
+/home/param/Desktop/Trie-Data-Strucutre/src/Trie.h
+
+/home/param/Desktop/Trie-Data-Strucutre/src/Trie.h
+Node.h
+/home/param/Desktop/Trie-Data-Strucutre/src/Node.h
+

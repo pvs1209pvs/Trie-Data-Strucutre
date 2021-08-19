@@ -1,4 +1,4 @@
-#include "../include/Node.h"
+#include "Node.h"
 #include <algorithm>
 #include <sstream>
 #include <iostream>
